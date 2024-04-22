@@ -8,6 +8,15 @@ To run your connectors using this runtime you have below option:
 
 * Mounting your connector(s) into a Docker image
 
+## Component Design
+
+The docker image consists of two parts, as shown in the design diagram.
+
+This current code base refers to part #a. That is, runtime wrapper that handles interaction with Zeebe, registration and associated handshake.
+
+The second part (#b core logic of the Redis Connector) is present here. https://github.com/rchari-ml/redis-connector-nodejs
+
+![alt text](image.png)
 
 ## References
 
