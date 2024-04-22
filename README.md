@@ -73,3 +73,6 @@ services:
 ```bash
 docker compose --env-file .env up
 ```
+
+# Contact for Support
+If you need any assistance, we are just an email away - contact@makelabs.in
