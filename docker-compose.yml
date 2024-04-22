@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  redis-connector-rt-svc:
+      volumes:
+      - ./__connectors__:/opt/connectors
+      image: makelabs/c8-connector-worker-runtime-nodejs:latest
+      deploy:
+        mode: replicated
+        replicas: 1
+      environment:
+        - LOG_LEVEL=INFO
+        - ZEEBE_ADDRESS
+        - ZEEBE_CLIENT_ID
+        - ZEEBE_CLIENT_SECRET
+        - ZEEBE_AUTHORIZATION_SERVER_URL
+        - REDIS_SECRET
